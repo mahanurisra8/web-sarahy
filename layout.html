@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Perpustakaan</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: indianred;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        header img {
+            height: 120px;
+            margin-right: 2rem;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #333;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            flex: 1;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        main {
+            padding: 1rem;
+        }
+
+        footer {
+            background-color: indianred;
+            color: white;
+            text-align: center;
+            padding: 0rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .form-section {
+            margin-top: 2rem;
+        }
+
+        .form-section form {
+            max-width: 400px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-section input, .form-section button {
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 0rem;
+        }
+
+        table, th, td {
+            border: 50px solid #ddd;
+        }
+
+        th, td {
+            padding: 9px;
+            text-align: left;
+        }
+
+        th {
+            background-color: indianred;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <script>
+        function validateForm() {
+            const namaTransaksi = document.getElementById('nama-transaksi').value;
+            const jenisBuku = document.getElementById('jenis-buku').value;
+            const tanggal = document.getElementById('tanggal').value;
+
+            if (!namaTransaksi || !jenisBuku || !tanggal) {
+                alert('Semua kolom harus diisi!');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="LOGO-PERPUSNAS.svg.png" alt="Logo Aplikasi">
+        <h1>Perpustakaan Nasional</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#login">Login</a></li>
+            <li><a href="#profil">Profil</a></li>
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#transaksi">Transaksi</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="login" class="form-section">
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+
+                <button type="submit">Masuk</button>
+            </form>
+        </section>
+
+        <section id="profil">
+            <h2>Profil</h2>
+            <p>Aplikasi Perpustakaan adalah platform digital yang dirancang untuk memudahkan pengelolaan koleksi buku, peminjaman, dan pengembalian buku. Dengan antarmuka yang intuitif, pengguna dapat dengan mudah mengakses dan mengelola data perpustakaan mereka.</p>
+        </section>
+
+        <section id="beranda">
+            <h2>Beranda</h2>
+            <p>Langkah-langkah menggunakan aplikasi:</p>
+            <ol>
+                <li>Masuk ke aplikasi menggunakan akun Anda.</li>
+                <li>Telusuri koleksi buku yang tersedia.</li>
+                <li>Lakukan peminjaman melalui halaman transaksi.</li>
+                <li>Kelola profil Anda dan riwayat transaksi.</li>
+            </ol>
+        </section>
+
+        <section id="transaksi" class="form-section">
+            <h2>Transaksi</h2>
+            <form onsubmit="return validateForm()">
+                <label for="nama-transaksi">Nama Transaksi:</label>
+                <input type="text" id="nama-transaksi" name="nama-transaksi">
+
+                <label for="jenis-buku">Jenis Buku:</label>
+                <input type="text" id="jenis-buku" name="jenis-buku">
+
+                <label for="tanggal">Tanggal:</label>
+                <input type="date" id="tanggal" name="tanggal">
+
+                <button type="submit">Simpan</button>
+            </form>
+
+            <a href="#daftar-transaksi">Lihat Daftar Transaksi</a>
+
+            <section id="daftar-transaksi">
+                <h3>Daftar Transaksi</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nama Transaksi</th>
+                            <th>Jenis Buku</th>
+                            <th>Tanggal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Novel Laut Bercerita</td>
+                            <td>Fiksi</td>
+                            <td>2025-01-01</td>
+                        </tr>
+                        <tr>
+                            <td>Novel Buya Hamka</td>
+                            <td>Non-Fiksi</td>
+                            <td>2025-01-02</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+    </main>
+
+    
+    
+    <footer>
+        <p>&copy; 2025 Aplikasi Perpustakaan. Semua Hak Dilindungi.</p>
+    </footer>
+</body>
+</html>

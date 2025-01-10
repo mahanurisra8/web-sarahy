@@ -1,0 +1,150 @@
+<style>
+    /* Reset dasar */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; /* Konsistensi ukuran */
+    }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+        box-sizing: border-box; /* Tambahkan untuk konsistensi ukuran */
+    }
+
+    header {
+        background-color: #4CAF50;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    header img {
+        height: 50px;
+        margin-right: 1rem;
+    }
+
+    header h1 {
+        margin: 0;
+    }
+
+    /* Gaya navigasi */
+    nav {
+        background-color: #333;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    nav li {
+        flex-grow: 1;
+    }
+
+    nav a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    nav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    /* Gaya konten utama */
+    main {
+        padding: 1rem;
+    }
+
+    /* Gaya footer */
+    footer {
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    /* Gaya kartu */
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .card {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    /* Gaya form */
+    .form-section {
+        margin-top: 2rem;
+    }
+
+    .form-section form {
+        max-width: 400px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-section input,
+    .form-section button {
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+    }
+
+    /* Gaya tabel */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid #ddd;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    /* Responsif untuk layar kecil */
+    @media (max-width: 768px) {
+        header {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        nav ul {
+            flex-direction: column;
+        }
+    }
+</style>

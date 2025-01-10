@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Beranda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: indianred;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            background-color: #333;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 1rem;
+            display: inline-block;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 2rem;
+            background-color: #eaeaea;
+            margin-bottom: 2rem;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            margin: 0.5rem 0;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            text-align: center;
+            width: 250px;
+        }
+
+        .feature-card img {
+            width: 200%;
+            height: auto;
+            border-radius: 50px;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        footer {
+            background-color: indianred;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .feature-card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di Perpustakaan Nasional</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#fitur">Fitur</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h2>Temukan Buku Favoritmu</h2>
+            <p>Perpustakaan digital dengan ribuan koleksi buku dari berbagai kategori.</p>
+        </section>
+
+        <section id="fitur" class="features">
+            <div class="feature-card">
+                <h3>Koleksi Buku</h3>
+                <p>Telusuri ribuan buku dari berbagai genre dan kategori.</p>
+            </div>
+            <div class="feature-card">
+                <img src="novel-laut bercerita.jpg" alt="Novel Laut Bercerita">
+                <h3>1. Novel Laut Bercerita</h3>
+                <p>(Fiksi)</p>
+            </div>
+            <div class="feature-card">
+                <img src="novel-buyahamka.jpg" alt="Novel Buya Hamka">
+                <h3>2. Novel Buya Hamka</h3>
+                <p>(Non Fiksi)</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Perpustakaan Nasional. Semua Hak Dilindungi.</p>
+    </footer>
+</body>
+</html>
